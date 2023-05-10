@@ -1,11 +1,6 @@
-@use "game";
+@use "../styles/" as s;
 
-$siteBackground: #fbfaf4;
-$siteColor: #f2b830;
-$textColor: #2c2820;
-$mainPageInsectNumber: 2;
-
-@for $i from 1 through $mainPageInsectNumber {
+@for $i from 1 through s.$mainPageInsectNumber {
     @keyframes fly-#{$i} {
         0% {
             left: -65px;
@@ -49,14 +44,14 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
-    background-color: $siteBackground;
+    background-color: s.$siteBackground;
     position: relative;
 }
 .insect {
     position: absolute;
     width: 65px;
     left: -65px;
-    @for $i from 1 through $mainPageInsectNumber {
+    @for $i from 1 through s.$mainPageInsectNumber {
         &-#{$i} {
             animation: fly-#{$i} 4s linear #{$i}s 1 normal running;
         }
@@ -88,7 +83,7 @@ body {
         line-height: 71px;
         color: $siteColor;
         &_special {
-            color: $textColor;
+            color: s.$textColor;
             font-size: 3rem;
         }
     }
@@ -103,17 +98,16 @@ body {
         padding: 16px 24px 16px 24px;
         border-radius: 8px;
         color: #403522;
-        border: 2px solid $siteColor;
+        border: 2px solid s.$siteColor;
         transition: 0.3s;
         &:hover {
-            color: $siteBackground;
-            background-color: $siteColor;
+            color: s.$siteBackground;
+            background-color: s.$siteColor;
         }
     }
     &__image {
         height: 100vh;
         align-items: center;
-        // margin-right: -76px;
     }
 }
 
