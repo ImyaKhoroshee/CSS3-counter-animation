@@ -8,7 +8,6 @@
 
 - Препроцессор SCSS
 
-- Visual Studio Code
 
 Данный проект в виде мини-игры собран без использования Java Script для демонстрации возможностей CSS3, таких как counter, counter-increment, counter-reset, animation (сгенерированная через приложение animista и собственная).
 
